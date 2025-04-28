@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
@@ -53,8 +52,8 @@ const ObligationsSection = () => {
           <div className="order-1 lg:order-2 opacity-0 animate-fade-in animate-delay-200">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" 
-                alt="Diagnostic immobilier" 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80" 
+                alt="Documents de diagnostic immobilier" 
                 className="rounded-lg shadow-lg w-full"
               />
               <div className="absolute -bottom-10 -left-10 hidden lg:block">

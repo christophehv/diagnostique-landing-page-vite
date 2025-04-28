@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
             opts={{
               align: "center",
             }}
-            onSelect={(index) => setActiveIndex(index)}
+            onSelect={(api) => setActiveIndex(api.selectedScrollSnap())}
             className="w-full"
           >
             <CarouselContent>

@@ -45,8 +45,8 @@ const CtaSection = () => {
             </div>
             <div className="hidden md:block relative">
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&auto=format&fit=crop&q=80" 
-                alt="Diagnostic immobilier" 
+                src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?w=500&auto=format&fit=crop&q=80" 
+                alt="Expert en diagnostic immobilier" 
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
