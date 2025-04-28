@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Couleurs personnalisées pour le diagnostic immobilier
+				'diag-blue': {
+					DEFAULT: '#0F3460',
+					light: '#2E78B7',
+				},
+				'diag-gray': '#F5F5F5',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: 0,
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: 1,
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in-right': {
+					from: {
+						opacity: 0,
+						transform: 'translateX(20px)'
+					},
+					to: {
+						opacity: 1,
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'fade-in-right': 'fade-in-right 0.5s ease-out forwards'
+			},
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'open-sans': ['"Open Sans"', 'sans-serif']
 			}
 		}
 	},
