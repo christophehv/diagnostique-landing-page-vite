@@ -24,29 +24,61 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simuler un envoi de formulaire
-    setTimeout(() => {
+  
+    try {
+      const response = await fetch("https://formspree.io/f/myzwkejl", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          message: formData.message,
+          propertyType: formData.propertyType,
+          surface: formData.surface,
+        }),
+      });
+  
+      if (response.ok) {
+        toast({
+          title: "Demande envoyée !",
+          description: "Nous vous contacterons dans les plus brefs délais.",
+          duration: 5000,
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          message: "",
+          propertyType: "",
+          surface: ""
+        });
+      } else {
+        toast({
+          title: "Erreur d'envoi",
+          description: "Veuillez réessayer plus tard.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error(error);
       toast({
-        title: "Demande envoyée !",
-        description: "Nous vous contacterons dans les plus brefs délais.",
-        duration: 5000,
+        title: "Erreur réseau",
+        description: "Impossible d'envoyer votre demande pour le moment.",
+        variant: "destructive",
       });
+    } finally {
       setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        message: "",
-        propertyType: "",
-        surface: ""
-      });
-    }, 1000);
+    }
   };
+  
 
   return (
     <section id="contact" className="py-20 bg-diag-gray">
@@ -189,7 +221,7 @@ const ContactSection = () => {
                     <Phone className="mr-3 flex-shrink-0 mt-1" size={20} />
                     <div>
                       <p className="font-semibold">Téléphone</p>
-                      <a href="tel:0123456789" className="text-blue-200 hover:text-white transition-colors">01 23 45 67 89</a>
+                      <a href="tel:0123456789" className="text-blue-200 hover:text-white transition-colors">06 19 44 61 47</a>
                     </div>
                   </li>
                   
@@ -197,20 +229,11 @@ const ContactSection = () => {
                     <Mail className="mr-3 flex-shrink-0 mt-1" size={20} />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:contact@diagexpert.fr" className="text-blue-200 hover:text-white transition-colors">contact@diagexpert.fr</a>
+                      <a href="mailto:contact@diagexpert.fr" className="text-blue-200 hover:text-white transition-colors">contact@3t-diagnostics.com</a>
                     </div>
                   </li>
                   
-                  <li className="flex items-start">
-                    <MapPin className="mr-3 flex-shrink-0 mt-1" size={20} />
-                    <div>
-                      <p className="font-semibold">Adresse</p>
-                      <address className="not-italic text-blue-200">
-                        15 rue des Experts<br />
-                        75015 Paris
-                      </address>
-                    </div>
-                  </li>
+                 
                 </ul>
               </div>
               

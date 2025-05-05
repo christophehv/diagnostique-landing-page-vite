@@ -1,6 +1,17 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ServiceCard from "./ServiceCard";
+import energyIcon from "@/assets/energy.svg";
+import amiante from "@/assets/amiante.svg";
+import plomb from "@/assets/plomb.svg";
+import termite from "@/assets/termites.svg";
+import gaz from "@/assets/gaz.svg";
+import electricite from "@/assets/electricite.svg";
+import surface from "@/assets/surface.svg";
+import risque from "@/assets/risque.svg";
+import handicap from "@/assets/handicap.svg";
+import dtg from "@/assets/dtg.svg";
+import assa from "@/assets/assainissement.svg"
 
 const ServicesSection = () => {
   const serviceCategories = [
@@ -11,32 +22,32 @@ const ServicesSection = () => {
         {
           title: "DPE",
           description: "Diagnostic de Performance Énergétique, obligatoire pour toute vente.",
-          icon: "/energy.svg"
+          icon: energyIcon
         },
         {
           title: "Amiante",
           description: "Détection de matériaux contenant de l'amiante dans les logements construits avant 1997.",
-          icon: "/amiante.svg"
+          icon: amiante
         },
         {
           title: "Plomb",
           description: "Constat de Risque d'Exposition au Plomb pour les logements construits avant 1949.",
-          icon: "/plomb.svg"
+          icon: plomb
         },
         {
           title: "Termites",
           description: "État relatif à la présence de termites dans les zones à risque.",
-          icon: "/termites.svg"
+          icon: termite
         },
         {
           title: "Gaz",
           description: "Diagnostic des installations intérieures de gaz de plus de 15 ans.",
-          icon: "/gaz.svg"
+          icon: gaz
         },
         {
           title: "Électricité",
           description: "Diagnostic des installations électriques de plus de 15 ans.",
-          icon: "/electricite.svg"
+          icon: electricite
         }
       ]
     },
@@ -45,24 +56,34 @@ const ServicesSection = () => {
       label: "Location",
       services: [
         {
-          title: "DPE Location",
-          description: "Diagnostic de Performance Énergétique, obligatoire pour toute mise en location.",
-          icon: "/energy.svg"
+          title: "DPE",
+          description: "Diagnostic de Performance Énergétique, obligatoire pour toute vente.",
+          icon: energyIcon
         },
         {
-          title: "Surface Habitable",
-          description: "Mesurage précis de la superficie habitable (loi Boutin).",
-          icon: "/surface.svg"
+          title: "Amiante",
+          description: "Détection de matériaux contenant de l'amiante dans les logements construits avant 1997.",
+          icon: amiante
         },
         {
-          title: "Plomb Location",
-          description: "CREP pour les logements construits avant 1949.",
-          icon: "/plomb.svg"
+          title: "Plomb",
+          description: "Constat de Risque d'Exposition au Plomb pour les logements construits avant 1949.",
+          icon: plomb
         },
         {
-          title: "État des Risques",
-          description: "État des Risques et Pollutions (ERP).",
-          icon: "/risque.svg"
+          title: "Termites",
+          description: "État relatif à la présence de termites dans les zones à risque.",
+          icon: termite
+        },
+        {
+          title: "Gaz",
+          description: "Diagnostic des installations intérieures de gaz de plus de 15 ans.",
+          icon: gaz
+        },
+        {
+          title: "Électricité",
+          description: "Diagnostic des installations électriques de plus de 15 ans.",
+          icon: electricite
         }
       ]
     },
@@ -73,22 +94,37 @@ const ServicesSection = () => {
         {
           title: "Accessibilité handicapés",
           description: "Diagnostic pour l'accessibilité des personnes à mobilité réduite.",
-          icon: "/handicap.svg"
+          icon: handicap
         },
         {
           title: "DTG",
           description: "Diagnostic Technique Global pour les copropriétés.",
-          icon: "/dtg.svg"
-        },
-        {
-          title: "Audit énergétique",
-          description: "Étude approfondie de la consommation énergétique d'un bâtiment.",
-          icon: "/audit.svg"
+          icon: dtg
         },
         {
           title: "Assainissement",
           description: "Contrôle des installations d'assainissement non collectif.",
-          icon: "/assainissement.svg"
+          icon: assa
+        },
+        {
+          title: "DPE Location",
+          description: "Diagnostic de Performance Énergétique, obligatoire pour toute mise en location.",
+          icon: energyIcon
+        },
+        {
+          title: "Surface Habitable",
+          description: "Mesurage précis de la superficie habitable (loi Boutin/ loi Carrez).",
+          icon: surface
+        },
+        {
+          title: "Plomb Location",
+          description: "CREP pour les logements construits avant 1949.",
+          icon: plomb
+        },
+        {
+          title: "État des Risques",
+          description: "État des Risques et Pollutions (ERP).",
+          icon: risque
         }
       ]
     }

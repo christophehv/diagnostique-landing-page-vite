@@ -26,8 +26,15 @@ const HeroSection = () => {
         <div className="max-w-3xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 opacity-0 animate-fade-in">
             Diagnostics immobiliers par des experts certifiés
+          <br />
+
+            
+            
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-0 animate-fade-in animate-delay-200">
+          Basés à Nice, nous intervenons dans toute la région PACA : Cannes, Antibes, Grasse, Menton, et partout sur la Côte d’Azur.
+          <br />
+          <br />
             Nous réalisons tous vos diagnostics obligatoires pour vente et location. 
             Rapport envoyé sous 24h avec certification reconnue sur tout le territoire.
           </p>
